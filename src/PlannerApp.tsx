@@ -263,7 +263,7 @@ function TimeGrid({
                 durationMin={b.durationMin}
                 onResize={(nextDuration: number) => onBlockChange(b.id, { durationMin: nextDuration })}
               >
-                <div className="text-xs font-medium">{b.note || b.label || 'Block'}</div>
+                <div className="text-xs font-medium">{b.note || b.templateId || 'Block'}</div>
                 <div className="text-[10px] opacity-80">{minutesToLabel(b.startMinOfDay)} → {minutesToLabel(b.startMinOfDay + b.durationMin)}</div>
               </DraggableBlock>
             );
